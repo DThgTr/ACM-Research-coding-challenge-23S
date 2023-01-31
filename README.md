@@ -16,9 +16,12 @@ Steps:
 
     - Remap spectral class:
     Spectral class value are letters, thus the order for value in the scatterplot will be in the wrong order. To reorganize the values in the right order, the values are mapped to accending number from 0 to 6 and then added to the dataframe as a new column
-            Python:
-    "order_map = {'O': 0, 'B': 1, 'A': 2, 'F': 3, 'G': 4, 'K': 5, 'M': 6}
-    df["mapped_spec"] = df["Spectral Class"].map(order_map)"
+    
+        Python:
+        ```
+        order_map = {'O': 0, 'B': 1, 'A': 2, 'F': 3, 'G': 4, 'K': 5, 'M': 6}
+        df["mapped_spec"] = df["Spectral Class"].map(order_map)
+        ```
     -  Map color to star type:
     There are in total 6 star type correspondingh to a number from 0 to 5. The colors for each star type will be in this order:
         - 0: Brown Dwarf: brown
@@ -29,23 +32,31 @@ Steps:
         - 5: Hypergiant: royalblue
 
         Python:
-        "star_type_color={0:'brown', 1:'red', 2:'white', 3:'orange', 4:'yellow', 5:'royalblue'}
-        type_map_color=df['Star type'].map(star_type_color)"
+        ```
+        star_type_color={0:'brown', 1:'red', 2:'white', 3:'orange', 4:'yellow', 5:'royalblue'}
+        type_map_color=df['Star type'].map(star_type_color)
+        ```
     - Constructing the diagram:
     The diagram will be be constructed as a scatterplot using matplotlib.
     The x and y axis will be, in order, Spectral class and Absolute magnitude.
+    
     Python:
+       
         - Define the plot:
-            "import matplotlib.pyplot as plt
-            fig, ax = plt.subplots(figsize=(5, 7))"
+            
+            import matplotlib.pyplot as plt
+            fig, ax = plt.subplots(figsize=(5, 7))
+            
         - Configuring the scatterplot:
-            "plt.gca().invert_yaxis()
+        
+            plt.gca().invert_yaxis()
             ax.set_title("H-R DIAGRAM")
             ax.set_xlabel("Spectral Class")
             ax.set_ylabel("Absolute Magnitude")
             ax.set_xticks(range(0,7,1))
             ax.set_xticklabels(['O', 'B', 'A', 'F', 'G', 'K', 'M'])
-            ax.scatter(df["mapped_spec"], df["Absolute magnitude(Mv)"], s=10, c=type_map_color)"
+            ax.scatter(df["mapped_spec"], df["Absolute magnitude(Mv)"], s=10, c=type_map_color)
+       
 
 ### Analysis
 1. Hertzsprung-Russell Diagram:
