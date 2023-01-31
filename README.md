@@ -1,15 +1,15 @@
-# Ploting stars data to support star distribution suggested by Hertzsprung-Russel Diagram
+# Ploting stars data to compare against star distribution suggested by Hertzsprung-Russel Diagram
 
 ### Data set and Tools
-**Dataset:** I am using the data set of stars by Deepraj Baidya (kaggle.com/deepu1109) 
+**Dataset:** I am using the data set of stars (kaggle.com/datasets/deepu1109/star-dataset) by Deepraj Baidya (kaggle.com/deepu1109) 
 **Tools:** Kaggle.com, Python(pandas, numpy)
 
-### Goals, processes and assumptions
-**Goal:** the goal is to demonstrate how the data set of stars may support the Herztsprung-Russell model of star distribution by contructing a Hertzsprung-Russel Diagram.
-**Constructing Hertzsprung-Russel Diagram:**
+### Goals and process:
+**Goal:** the goal is to demonstrate how the data set of stars may support the star distribution suggested by Herztsprung-Russell Diagram by contructing a scatter plot of the data set's absolute magnitude, spectral class and star type columns.
+**Constructing the scatterplot:**
 1. Assumption: 
 Aside from Spectral class, Absolute magnitude and Star type, other columns are not neccessary, thus they will be omitted.
-2. Constructing the diagram
+2. Constructing the scatterplot:
 Programming language: Python
 Libraries: pandas, numpy, matplotlib
 Steps:
@@ -55,7 +55,7 @@ Star distribution:
     - White Dwarf: these are hot stars of small mass. They generally fall to the bottom left of the diagram (higher Absolute magnitude and closer to Spectral class value O).
     - Red Dwarf: these are cool and dim stars. They generally fall to the bottom right of the diagram (higher Absolute magnitude and closer to Spectral class value M).
     - Brown Dwarf: these are failed star, which are usually stellar objects that are not massive enough to sustain nuclear fusion. They can be seen as similar to Red Dwarf, but more cool and dim (higher Absolute magnitude and closer to Spectral class value M).
-2. Plot comparison:
+2. Scatterplot comparison:
     - Giants(super and hyper): these stars are concentrated at the top in the scatterplot. This, for the most part, is consistent with their supposed distribution.
     - Main Sequence: these stars are concentrated in the middle of the scatterplot. They directly supports their supposed distribution,
     - White Dwarf: these stars are concentrated in the bottom left of the scatterplot. Similar to the Main Sequence stars, they are consistent with their supposed distribution
